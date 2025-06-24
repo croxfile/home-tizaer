@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tizaer</title>
+    <!-- Enlace a Google Fonts para 'Montserrat' y 'Oswald' -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <!-- Enlace a Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuración de fuentes y colores personalizados para Tailwind */
+        :root {
+            --primary-color: #000000; /* Dark gray for main elements */
+            --secondary-color: #f4f4f4; /* Light gray for backgrounds */
+            --accent-color: #00BFFF; /* Bright blue for accents (changed from red) */
+            --text-color: #555; /* Medium gray for general text */
+            --light-text-color: #f9f9f9; /* Off-white for text on dark backgrounds */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Estilos personalizados para la tabla de tallas */
+        .sizing-table {
+            border-collapse: collapse;
+        }
+
+        .sizing-table th,
+        .sizing-table td {
+            border: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary-color)',
+                        secondary: 'var(--secondary-color)',
+                        accent: 'var(--accent-color)',
+                        'text-color': 'var(--text-color)',
+                        'light-text-color': 'var(--light-text-color)',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-secondary text-text-color">
+    <!-- Sección de encabezado -->
+    <header class="bg-primary text-light-text-color py-4 text-center shadow-md">
+        <h1 class="font-oswald text-4xl sm:text-5xl md:text-6xl uppercase tracking-wider">Tizaer</h1>
+        <p class="mt-2 text-lg">Tu Diseño, Nuestro Estilo. Flow Tizaer.</p>
+    </header>
+
+    <!-- Barra de navegación sticky -->
+    <nav class="bg-primary sticky top-0 z-50 shadow-md">
+        <ul class="flex flex-col sm:flex-row justify-center py-2">
+            <li><a href="#inicio" class="block py-3 px-4 sm:px-6 text-light-text-color uppercase font-bold hover:bg-accent hover:text-primary transition-colors duration-300 rounded-md mx-1 my-1 sm:my-0 active-link">Inicio</a></li>
+            <li><a href="#productos" class="block py-3 px-4 sm:px-6 text-light-text-color uppercase font-bold hover:bg-accent hover:text-primary transition-colors duration-300 rounded-md mx-1 my-1 sm:my-0">Nuestros Productos</a></li>
+            <li><a href="#medidas" class="block py-3 px-4 sm:px-6 text-light-text-color uppercase font-bold hover:bg-accent hover:text-primary transition-colors duration-300 rounded-md mx-1 my-1 sm:my-0">Guía de Tallas</a></li>
+            <li><a href="#personalizacion" class="block py-3 px-4 sm:px-6 text-light-text-color uppercase font-bold hover:bg-accent hover:text-primary transition-colors duration-300 rounded-md mx-1 my-1 sm:my-0">Personalización</a></li>
+            <li><a href="#por-que-elegirnos" class="block py-3 px-4 sm:px-6 text-light-text-color uppercase font-bold hover:bg-accent hover:text-primary transition-colors duration-300 rounded-md mx-1 my-1 sm:my-0">¿Por Qué Elegirnos?</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor principal de la página -->
+    <div class="container mx-auto w-11/12 max-w-6xl my-8 p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow-lg">
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="py-8 border-b border-gray-200">
+            <h2 class="font-oswald text-3xl sm:text-4xl text-primary text-center mb-6 uppercase tracking-wide">Bienvenido a Tizaer</h2>
+            <p class="mb-4 text-justify">En Tizaer, creemos que tu ropa debe ser una extensión de tu personalidad. Nos especializamos en <strong class="text-primary">franelas oversize personalizadas</strong> y <strong class="text-primary">sudaderas con capucha</strong> de alta calidad, diseñadas para brindarte comodidad y estilo inigualables. Ya sea que busques una declaración audaz o algo sutilmente único, aquí puedes crear la prenda perfecta que hable por ti.</p>
+            <p class="text-justify">Explora nuestras opciones, sube tus propios diseños y déjanos transformar tu visión en una realidad vestible. ¡Prepárate para destacar con Tizaer!</p>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section id="productos" class="py-8 border-b border-gray-200">
+            <h2 class="font-oswald text-3xl sm:text-4xl text-primary text-center mb-6 uppercase tracking-wide">Nuestros Productos Estrella</h2>
+            <p class="text-center mb-8">Descubre nuestra exclusiva selección de prendas diseñadas para el máximo confort y estilo urbano.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Tarjeta de Producto: Franelas Oversize -->
+                <div class="bg-secondary p-6 rounded-lg text-center shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/300x200/00BFFF/FFFFFF?text=Franela+Oversize" alt="Franela Oversize" class="max-w-full h-auto rounded-md mb-4 mx-auto">
+                    <h3 class="font-oswald text-2xl text-primary mb-2">Franelas Oversize Premium</h3>
+                    <p class="text-text-color">Las prendas oversize se han consolidado como una de las mejores opciones por su inigualable combinación de estilo, comodidad y versatilidad. Su corte amplio y relajado no solo ofrece una libertad de movimiento excepcional, ideal para el día a día en cualquier clima, sino que también aporta un aire moderno y desenfadado que se adapta a diversas siluetas. </p>
+                </div>
+                <!-- Tarjeta de Producto: Sudaderas con Capucha -->
+                <div class="bg-secondary p-6 rounded-lg text-center shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/300x200/333/FFFFFF?text=Sudadera+con+Capucha" alt="Sudadera con Capucha" class="max-w-full h-auto rounded-md mb-4 mx-auto">
+                    <h3 class="font-oswald text-2xl text-primary mb-2">Sudaderas con Capucha Confort</h3>
+                    <p class="text-text-color">. Su diseño holgado y relajado no solo permite una libertad de movimiento sin igual, ideal para cualquier actividad diaria, sino que también ofrece un look moderno y desenfadado que se adapta a diversas figuras. Proyectan una imagen de sofisticación sin esfuerzo, lo que las convierte en una opción inclusiva y sumamente cómoda que no sacrifica la estética.</p>
+                </div>
+                <!-- Tarjeta de Producto: Diseños Exclusivos -->
+                <div class="bg-secondary p-6 rounded-lg text-center shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/300x200/555/FFFFFF?text=Diseño+Exclusivo" alt="Diseño Exclusivo" class="max-w-full h-auto rounded-md mb-4 mx-auto">
+                    <h3 class="font-oswald text-2xl text-primary mb-2">Franelas Oversize Unicolor</h3>
+                    <p class="text-text-color">Las franelas unicolor son un pilar fundamental en cualquier guardarropa, destacándose por su versatilidad incomparable y su capacidad de adaptarse a cualquier estilo. ofreciendo una estética limpia y sofisticada. Además, su atemporalidad asegura que siempre estén en tendencia, convirtiéndolas en una inversión inteligente para quienes buscan comodidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Medidas -->
+        <section id="medidas" class="py-8 border-b border-gray-200">
+            <h2 class="font-oswald text-3xl sm:text-4xl text-primary text-center mb-6 uppercase tracking-wide">Guía de Tallas de Franelas Oversize</h2>
+            <p class="text-center mb-4">Para asegurar el ajuste perfecto, consulta nuestra tabla de medidas. Recuerda que nuestras franelas están diseñadas para un estilo holgado y cómodo.</p>
+            <div class="overflow-x-auto">
+                <table class="sizing-table w-full mx-auto text-sm sm:text-base">
+                    <thead>
+                        <tr>
+                            <th class="bg-primary text-light-text-color py-3 px-2 sm:px-4 uppercase tracking-wider text-center rounded-tl-lg">Talla</th>
+                            <th class="bg-primary text-light-text-color py-3 px-2 sm:px-4 uppercase tracking-wider text-center">Ancho (cm)</th>
+                            <th class="bg-primary text-light-text-color py-3 px-2 sm:px-4 uppercase tracking-wider text-center">Largo (cm)</th>
+                            <th class="bg-primary text-light-text-color py-3 px-2 sm:px-4 uppercase tracking-wider text-center rounded-tr-lg">Manga (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="even:bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-2 sm:px-4 text-center">S</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">53</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">65</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">28</td>
+                        </tr>
+                        <tr class="even:bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-2 sm:px-4 text-center">M</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">55</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">68</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">28</td>
+                        </tr>
+                        <tr class="even:bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-2 sm:px-4 text-center">L</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">59</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">71</td>
+                            <td class="py-3 px-2 sm:px-4 text-center">32</td>
+                        </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección de Personalización -->
+        <section id="personalizacion" class="py-8 border-b border-gray-200">
+            <h2 class="font-oswald text-3xl sm:text-4xl text-primary text-center mb-6 uppercase tracking-wide">¡Personaliza Tu Prenda!</h2>
+            <p class="text-center mb-6">¿Tienes un diseño en mente? ¡Hazlo realidad! En Tizaer, te damos la libertad de crear una prenda verdaderamente tuya. Sube tu logo, una ilustración, una frase o cualquier imagen que desees.</p>
+            <div class="personalization-content text-center">
+                <p class="mb-4 text-lg">Haz clic en el siguiente enlace para empezar a personalizar:</p>
+                <!-- Hipervínculo para subir diseño -->
+                <a href="https://studio.morflax.com/clothing-mockups" target="_blank" class="inline-block bg-accent text-primary py-3 px-8 rounded-lg font-bold text-xl hover:bg-blue-600 transform transition-transform duration-300 hover:-translate-y-1 shadow-lg">Empezar Mi Diseño</a>
+                <p class="mt-6 text-sm text-gray-600"><em>(Este es un enlace que te llevara a otra plataforma web la cual podras empezar a realizar tu diseño, acá podras seleccionar el tipo de prenda ya sea un Sueter o Franela. Una vez ya cargado tu diseño, dale en el botón de <b>Export</b> para guardar el archivo. Nos puedes contactar por medio de Instagram para consultar información con la prenda que creaste)</em> <b>Instagram: @tiza.er</b></p>
+            </div>
+        </section>
+
+        <!-- Sección de Por Qué Elegirnos (Mensaje Final) -->
+        <section id="por-que-elegirnos" class="py-8">
+            <div class="final-message bg-primary text-light-text-color p-8 rounded-lg shadow-xl mt-12">
+                <h3 class="font-oswald text-3xl sm:text-4xl text-accent mb-6">¿Por Qué Preferir Tizaer?</h3>
+                <p class="mb-4 text-lg leading-relaxed text-justify">En Tizaer, nos aseguramos que te sientas comodo/a con la prenda que tienes puesta. Utilizamos <strong class="text-accent">materiales premium</strong> para asegurar la durabilidad y comodidad de cada prenda. Utilizamos <strong class="text-accent">tela de la más alta calidad</strong> seleccionadas por su suavidad, durabilidad y resistencia al desgaste.</p>
+                <p class="mb-4 text-lg leading-relaxed text-justify">Garantizando que tus prendas luzcan increíbles y se mantengan en perfecto estado con el tiempo. <strong class="text-accent"> Confía en Tizaer para crear esas prendas personalizadas que te harán sentir único y especial.</strong>
+                <p class="text-lg leading-relaxed text-center font-bold text-accent">¡Elige Tizaer y viste tu autenticidad!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="text-center py-6 mt-12 bg-primary text-light-text-color text-sm shadow-inner">
+        <p>&copy; 2025 Tizaer. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para desplazamiento suave de la navegación y manejo de clases activas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            // Función para añadir/remover la clase 'active-link'
+            const setActiveLink = (targetId) => {
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    // Usa la clase 'bg-accent' y 'text-primary' de Tailwind para el estado activo
+                    link.classList.remove('bg-accent', 'text-primary');
+                    link.classList.add('hover:bg-accent', 'hover:text-primary', 'text-light-text-color');
+                });
+                const currentLink = document.querySelector(`nav ul li a[href="${targetId}"]`);
+                if (currentLink) {
+                    currentLink.classList.add('active-link');
+                    // Aplica las clases de Tailwind para el estado activo
+                    currentLink.classList.add('bg-accent', 'text-primary');
+                    currentLink.classList.remove('hover:bg-accent', 'hover:text-primary', 'text-light-text-color');
+                }
+            };
+
+            // Desplazamiento suave al hacer clic en los enlaces de navegación
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    setActiveLink(targetId);
+                });
+            });
+
+            // Establecer la clase 'active' al cargar la página si hay un hash en la URL
+            if (window.location.hash) {
+                setActiveLink(window.location.hash);
+            } else {
+                // Si no hay hash, establecer "Inicio" como activo por defecto
+                setActiveLink('#inicio');
+            }
+
+            // Opcional: Actualizar la clase activa al desplazarse por la página
+            window.addEventListener('scroll', () => {
+                let current = '';
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // Adjusted scroll position check for better active link management
+                    if (pageYOffset >= sectionTop - window.innerHeight / 3) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+                if (current && document.querySelector(`nav ul li a[href="${current}"]`) && !document.querySelector(`nav ul li a[href="${current}"]`).classList.contains('active-link')) {
+                    setActiveLink(current);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
